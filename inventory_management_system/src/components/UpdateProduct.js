@@ -27,7 +27,7 @@ export default function InsertProduct() {
     useEffect(() => {
         const getProduct = async () => {
           try {
-            const res = await fetch(`http://localhost:3001/products/${id}`, {
+            const res = await fetch(process.env.REACT_APP_API_URL+`products/${id}`, {
               method: "GET",
               headers: {
                 "Content-Type": "application/json"
